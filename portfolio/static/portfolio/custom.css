@@ -1,0 +1,27 @@
+.navbar-brand {
+    font-family: 'Cabin', sans-serif;
+}
+
+.navbar-nav {
+    font-family: 'Oswald', sans-serif;
+}
+
+.container {
+    margin-top: 25px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.intro{
+    font-family: 'Kristi', cursive;
+    font-size: xx-large;
+    align-self: stretch;
+    color: grey;
+}
+
+#blogtitle{
+    margin-top: 25px;
+}
+
+#blog_nail{
+    max-width: 200px;
+}

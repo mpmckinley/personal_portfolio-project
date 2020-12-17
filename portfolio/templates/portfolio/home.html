@@ -1,0 +1,33 @@
+{% extends "portfolio/base.html" %}
+
+{% block content %}
+
+{% load static %}
+  
+    <body>
+
+    <div class="container home">
+        <div class="row">
+            <p class="text-center intro">
+                There are many things we think we know that are only validated through experience.
+            </p>
+        </div>
+        <hr>
+        <div class="row">
+            {% for project in projects %}
+                <div class="col">
+                    <img src="{{ project.image.url }}" height=90>
+                    <h2>{{ project.title }}</h2>
+                    <small>{{ project.description }}</small>
+                    <br>
+                    {% if project.url %}
+                        <a href="{{ project.url }}">Link</a>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    </body>
+
+{% endblock content %}

@@ -1,0 +1,32 @@
+{% extends "portfolio/base.html" %}
+
+{% block content %}
+
+
+        <div class="container">
+            <div class="row">
+                {% for blog in blogs %}
+         
+                {% if blog.image %}
+                    <img src="{{ blog.image.url }}" id='blog_nail'>
+                {% endif %}
+                <a href="{% url 'blog:detail' blog.id %}">
+                    <h2>{{ blog.title }}</h2>
+                </a>
+                <p class="text-muted">
+                    {{ blog.date|date:'n.d.Y' }}
+                </p>
+                 <h5>
+                    {{ blog.description|truncatechars:150 }}
+                 </h5>
+                <br>
+                {% if blog.url %}
+                    <a href="{{ blog.url }}">Link</a>
+                {% endif %}
+
+                {% endfor %}
+            </div>
+        </div>
+
+
+{% endblock content %}
